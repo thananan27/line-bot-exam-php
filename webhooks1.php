@@ -8,6 +8,9 @@
    //รับข้อความจากผู้ใช้
    $message = $arrayJson['events'][0]['message']['text'];
    //รับ id ของผู้ใช้
+if($eventObj->isGroupEvent()){
+    $groupId = $eventObj->getGroupId();  
+}
    if(isset($arrayJson['events'][0]['source']['userId'])){
       $id = $arrayJson['events'][0]['source']['userId'];
    }
