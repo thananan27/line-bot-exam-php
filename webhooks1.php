@@ -8,7 +8,7 @@
    //รับข้อความจากผู้ใช้
    $message = $arrayJson['events'][0]['message']['text'];
    //รับ id ของผู้ใช้
-   if(isset($arrayJson['events'][0]['source']['userId']){
+   if(isset($arrayJson['events'][0]['source']['userId'])){
       $id = $arrayJson['events'][0]['source']['userId'];
    }
    else if(isset($arrayJson['events'][0]['source']['groupId'])){
